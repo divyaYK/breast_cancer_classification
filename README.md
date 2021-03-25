@@ -24,5 +24,5 @@
 ### Dataset
 Link: https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(Diagnostic) <br><br>
 ### Algorithm
-Support Vector Machine
+Support Vector Machine<br>
 Libraries used: numpy, pandas, matplotlib, seaborn, sklearn
