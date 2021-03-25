@@ -39,3 +39,7 @@ Libraries used: numpy, pandas, matplotlib, seaborn, sklearn
 
 - Using heatmap:
 ![Heatmap](./heatmap.png)
+
+### Trained Model
+Heatmap of confusion matrix:
+![Confusion Matrix](./trainedheatmap.png)

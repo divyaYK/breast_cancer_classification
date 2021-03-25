@@ -45,7 +45,7 @@ X = dataframe_cancer.drop(['target'], axis=1)
 y = dataframe_cancer['target']
 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=5)
 
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, confusion_matrix
@@ -53,3 +53,10 @@ svc_model = SVC()
 svc_model.fit(X_train, y_train)
 
 # TODO: Evaluate the model
+y_predict = svc_model.predict(X_test)
+cm = confusion_matrix(y_test, y_predict)
+print(f"\nConfusion Matrix: {cm}")
+
+sns.heatmap(cm)
+plt.show()
+
