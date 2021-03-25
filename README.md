@@ -43,3 +43,9 @@ Libraries used: numpy, pandas, matplotlib, seaborn, sklearn
 ### Trained Model
 Heatmap of confusion matrix:
 ![Confusion Matrix](./trainedheatmap.png)
+
+### Evaluated and improved model
+![Scatter Plot graph](./scaledscatter.png)
+![CM improved](./cmimproved.png)
+
+##### Accuracy: 96%
