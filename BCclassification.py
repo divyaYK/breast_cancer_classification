@@ -25,14 +25,31 @@ print(f"\nFirst five rows: \n{dataframe_cancer.head()}")
 # TODO: Visualize data
 # using pairplot
 sns.pairplot(dataframe_cancer, hue='target',vars=['mean radius', 'mean texture', 'mean area', 'mean perimeter', 'mean smoothness'])
-plt.show()
+# plt.show()
+
 # using countplot
 sns.countplot(dataframe_cancer['target'])
-plt.show()
+# plt.show()
+
 # using scatterplot
 sns.scatterplot(x='mean area', y='mean smoothness', hue='target', data=dataframe_cancer)
-plt.show()
+# plt.show()
+
 # using heatmap
 plt.figure(figsize=(20,10))
 sns.heatmap(dataframe_cancer.corr(), annot=True)
-plt.show()
+# plt.show()
+
+# TODO: Train the Model
+X = dataframe_cancer.drop(['target'], axis=1)
+y = dataframe_cancer['target']
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+from sklearn.svm import SVC
+from sklearn.metrics import classification_report, confusion_matrix
+svc_model = SVC()
+svc_model.fit(X_train, y_train)
+
+# TODO: Evaluate the model
