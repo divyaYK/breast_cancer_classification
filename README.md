@@ -26,3 +26,16 @@ Link: https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(Diagnosti
 ### Algorithm
 Support Vector Machine<br>
 Libraries used: numpy, pandas, matplotlib, seaborn, sklearn
+
+### Data Visualization
+- Using pair plot:
+![Pair Plot graph](./pairplot.png)
+
+- Using count plot:
+![Count Plot graph](./countplot.png)
+
+- Using scatter plot:
+![Scatter Plot graph](./scatterplot.png)
+
+- Using heatmap:
+![Heatmap](./heatmap.png)
